@@ -20,7 +20,7 @@ export default function AppicantHero() {
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover rounded-4xl w-full h-auto"
+                className="object-cover rounded-t-4xl w-full h-auto"
               />
               <div className="px-10 py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">
@@ -43,7 +43,7 @@ export default function AppicantHero() {
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover rounded-4xl w-full h-auto"
+                className="object-cover rounded-t-4xl w-full h-auto"
               />
               <div className="px-10 py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">
