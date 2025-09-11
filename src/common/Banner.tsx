@@ -13,7 +13,7 @@ export default function Banner() {
               alt="Banner"
               width={500}
               height={500}
-              className="object-cover w-full h-full"
+              className="object-cover rounded-r-4xl w-full h-full"
             />
           </div>
           <div className="col-span-5">

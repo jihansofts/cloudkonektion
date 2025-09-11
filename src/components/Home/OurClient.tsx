@@ -19,7 +19,7 @@ export default function OurClient() {
             How we’ve delivered results for <br /> our clients
           </h2>
 
-          <div className="bg-white w-full text-start p-10 max-w-5xl rounded-lg shadow-sm lg:mt-20 md:mt-10 sm:mt-5 mt-5">
+          <div className="bg-white  w-full text-start p-10 max-w-5xl rounded-4xl shadow-sm lg:mt-20 md:mt-10 sm:mt-5 mt-5">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">
               Headhunting
             </h1>
@@ -54,7 +54,7 @@ export default function OurClient() {
               </p> */}
             </div>
           </div>
-          <div className="bg-white w-full text-start p-10 max-w-5xl rounded-lg shadow-sm lg:mt-20 md:mt-10 sm:mt-5 mt-5">
+          <div className="bg-white w-full text-start p-10 max-w-5xl rounded-4xl shadow-sm lg:mt-20 md:mt-10 sm:mt-5 mt-5">
             <h1 className="text-2xl font-bold text-gray-800 mb-4">
               Recruiting
             </h1>
