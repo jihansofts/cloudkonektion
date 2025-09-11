@@ -26,13 +26,21 @@ export default function WorkRecrui() {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <Image
-              src="/images/Re-min.jpg"
-              alt="Headhunting"
-              width={600}
-              height={600}
-              className="object-cover max-w-[400px] rounded-4xl h-auto"
-            />
+            <div>
+              <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-primary via-transparent to-primary">
+                <div className="relative aspect-square overflow-hidden rounded-4xl bg-white">
+                  <Image
+                    src="/images/Re-min.jpg"
+                    alt="Bob"
+                    width={400}
+                    height={400}
+                    priority
+                    className="w-full h-full object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

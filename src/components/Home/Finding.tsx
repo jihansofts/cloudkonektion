@@ -9,7 +9,7 @@ export default function Finding() {
             <span className="text-[17px] text-primary font-normal font-sans">
               BEYOND HIRING, CREATING IMPACT
             </span>
-            <h2 className="text-[52px] leading-[70px] font-bold font-sans mt-4 text-secondary">
+            <h2 className="text-[52px] leading-[70.5px] font-bold font-sans mt-4 text-secondary">
               Finding the right person is both an art and a science.
             </h2>
             <h5 className="text-[20px] font-bold font-sans mt-4">
