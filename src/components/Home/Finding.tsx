@@ -25,9 +25,9 @@ export default function Finding() {
             </p>
           </div>
 
-          <div className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center space-x-10">
-            <div className="p-[3px] h-[300px] rounded-4xl animate-border bg-gradient-to-r from-primary via-transparent to-primary">
-              <div className="bg-[#025c7a] rounded-4xl ">
+          <div className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center items-center space-x-10">
+            <div className="p-[3px] w-[200px] h-[200px]  rounded-[50%] animate-border bg-gradient-to-r from-primary via-transparent to-primary">
+              <div className="bg-white  rounded-[50%] ">
                 <Image
                   src="/Cloud Konektion logo black-01.png"
                   alt="Finding"
