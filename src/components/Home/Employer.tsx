@@ -16,7 +16,7 @@ export default function employers() {
                 className="object-cover"
               />
             </div>
-            <div className="relative z-10 max-w-[500px] ">
+            <div className="relative z-10 max-w-[500px] h-auto">
               <Image
                 src="/images/employe.png"
                 alt="Employers"
