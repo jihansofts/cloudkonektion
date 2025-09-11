@@ -79,7 +79,7 @@ export default function Banner() {
                 href="/about"
                 className="text-[20px] font-bold font-sans text-white bg-primary px-10 py-3 rounded-4xl mt-16 hover:bg-secondary duration-300">
                 {" "}
-                More about the car service
+                More about the service
               </Link>
             </div>
           </div>

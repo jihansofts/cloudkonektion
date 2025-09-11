@@ -16,13 +16,13 @@ export default function employers() {
                 className="object-cover"
               />
             </div>
-            <div className="relative z-10">
+            <div className="relative z-10 max-w-[500px] ">
               <Image
                 src="/images/employe.png"
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover"
+                className="object-cover "
               />
             </div>
             <div className="absolute flex flex-col justify-center items-center bottom-0 left-0 p-5 z-10 w-48 h-48 bg-primary">

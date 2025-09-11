@@ -26,14 +26,18 @@ export default function Finding() {
           </div>
 
           <div className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center space-x-10">
-            <Image
-              src="/Cloud Konektion logo black-01.png"
-              alt="Finding"
-              width={300}
-              height={300}
-              priority
-              className="rounded-full object-cover"
-            />
+            <div className="p-[3px] h-[300px] rounded-4xl animate-border bg-gradient-to-r from-primary via-transparent to-primary">
+              <div className="bg-[#025c7a] rounded-4xl ">
+                <Image
+                  src="/Cloud Konektion logo black-01.png"
+                  alt="Finding"
+                  width={300}
+                  height={300}
+                  priority
+                  className="rounded-full object-cover"
+                />
+              </div>
+            </div>
 
             <div className="flex flex-col space-y-10">
               {/* First animated border image */}
