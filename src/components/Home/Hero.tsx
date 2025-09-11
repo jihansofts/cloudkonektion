@@ -28,7 +28,7 @@ export default function Hero() {
               <span className="text-[17px] text-primary font-normal font-sans">
                 RECRUITING & HEADHUNTING
               </span>
-              <h2 className="text-[52px] font-bold font-sans mt-4 text-secondary">
+              <h2 className="text-[52px] leading-[70px] font-bold font-sans mt-4 text-secondary">
                 We find exceptional talent for your company.
               </h2>
 

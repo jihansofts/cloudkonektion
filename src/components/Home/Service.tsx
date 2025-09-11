@@ -47,7 +47,7 @@ export default function Service() {
             {/* Service Boxes */}
             <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-[550px]">
               {/* Card 1 */}
-              <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
+              <div className="bg-white p-6 shadow-md rounded-2xl hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <TiMessages size={20} />
                 </div>
@@ -61,7 +61,7 @@ export default function Service() {
               </div>
 
               {/* Card 2 */}
-              <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
+              <div className="bg-white p-6 shadow-md rounded-2xl hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <FaPen size={18} />
                 </div>
@@ -75,7 +75,7 @@ export default function Service() {
               </div>
 
               {/* Card 3 */}
-              <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
+              <div className="bg-white p-6 shadow-md rounded-2xl hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <FaCalendarAlt size={18} />
                 </div>
@@ -90,7 +90,7 @@ export default function Service() {
               </div>
 
               {/* Card 4 */}
-              <div className="bg-white p-6 shadow-md rounded-md hover:shadow-xl duration-300">
+              <div className="bg-white p-6 shadow-md rounded-2xl hover:shadow-xl duration-300">
                 <div className="flex items-center justify-center w-10 h-10 bg-primary text-white rounded-full mb-4">
                   <FaQuestionCircle size={18} />
                 </div>

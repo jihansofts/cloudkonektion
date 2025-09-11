@@ -27,11 +27,11 @@ export default function Headhunting() {
           </div>
           <div className="flex justify-center items-center">
             <Image
-              src="/images/round.png"
+              src="/images/HH-min.jpg"
               alt="Headhunting"
               width={600}
               height={600}
-              className="object-cover max-w-[400px] h-auto"
+              className="object-cover max-w-[400px] rounded-4xl h-auto"
             />
           </div>
         </div>

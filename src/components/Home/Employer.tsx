@@ -25,9 +25,9 @@ export default function employers() {
                 className="object-cover ml-20 "
               />
             </div>
-            <div className="absolute flex flex-col justify-center items-center bottom-0 left-0 p-5 z-10 w-48 h-48 bg-primary">
+            <div className="absolute  rounded-4xl flex flex-col justify-center items-center bottom-0 left-0 p-5 z-10 w-48 h-48 bg-primary">
               <h2 className="text-[40px] font-bold font-sans text-white">
-                20 +
+                10 +
               </h2>
               <p className="text-[16px] font-bold font-sans text-white">
                 Years of Experience
@@ -46,7 +46,7 @@ export default function employers() {
               top-tier talent for your business.
             </p>
             <div>
-              <div className="bg-white p-4 flex justify-center items-start w-full mt-5">
+              <div className="bg-white p-4 flex justify-center rounded-2xl items-start w-full mt-5">
                 <span className="bg-primary text-white rounded-full w-10 h-10 flex justify-center items-center">
                   01
                 </span>
@@ -61,7 +61,7 @@ export default function employers() {
                   </p>
                 </div>
               </div>
-              <div className="bg-white p-4 flex justify-center items-start w-full mt-5">
+              <div className="bg-white p-4 flex rounded-2xl justify-center items-start w-full mt-5">
                 <span className="bg-primary text-white rounded-full w-10 h-10 flex justify-center items-center">
                   02
                 </span>
