@@ -21,7 +21,7 @@ export default function Footer() {
           <h2 className="text-2xl font-bold">
             Cloud Konektion <span className="text-primary">®</span>
           </h2>
-          <p className="text-sm text-red-400 mt-2">
+          <p className="text-sm text-primary mt-2">
             We find exceptional talent for your company
           </p>
 

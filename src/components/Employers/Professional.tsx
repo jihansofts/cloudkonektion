@@ -10,7 +10,7 @@ export default function Professional() {
         <h2 className="text-[33px] font-medium font-sans mt-4 text-secondary">
           By leveraging our expertise and extensive network of professionals,
           you can streamline your recruitment process, secure top talent, and
-          achieve sustainable long-term success.Together, we will find your
+          achieve sustainable long-term success . Together, we will find your
           unicorn.
         </h2>
         <button

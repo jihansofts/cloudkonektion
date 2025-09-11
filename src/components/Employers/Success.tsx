@@ -6,7 +6,7 @@ export default function Success() {
       <div className="container mx-auto max-w-6xl px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 justify-between items-center gap-12">
           <div>
-            <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
+            <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-primary via-transparent to-primary">
               <div className="relative aspect-square overflow-hidden rounded-4xl bg-white">
                 <Image
                   src="/images/employee1.png"

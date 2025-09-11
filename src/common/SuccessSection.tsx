@@ -26,7 +26,7 @@ export default function SuccessSection({
           }`}>
           {/* Image with border animation */}
           <div>
-            <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
+            <div className="relative p-[3px] rounded-4xl animate-border bg-gradient-to-r from-primary via-transparent to-primary">
               <div className="relative aspect-square overflow-hidden rounded-4xl bg-white">
                 <Image
                   src={image}
