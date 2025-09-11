@@ -29,7 +29,7 @@ export default function Banner() {
               </h5>
               <p className="text-[17px] text-secondary text-normal font-sans mt-4">
                 In addition to standard hiring solutions,{" "}
-                <strong>Cloud Konektion</strong>
+                <strong>Cloud Konektion</strong>{' '}
                 delivers specialised recruitment support tailored to businesses
                 with unique workforce needs.
               </p>

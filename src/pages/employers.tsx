@@ -25,7 +25,6 @@ export default function employers() {
         imageAlt="Bob"
       />
       <Personality />
-      <Banner />
     </main>
   );
 }

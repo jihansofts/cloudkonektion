@@ -36,7 +36,7 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-[#F4F4F2]"
       }`}>
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
+      <div className="container  mx-auto flex items-center justify-between py-3 px-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Image
@@ -65,12 +65,17 @@ export default function Navbar() {
         </nav>
 
         {/* Call Button */}
+        <div
+          className={`fixed inset-0 ${
+            isOpen ? "block" : "hidden"
+          }`}>
+          <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="hidden md:inline-block cursor-pointer bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-secondary">
           Contact Us
         </button>
-        <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
 
         {/* Mobile Menu Button */}
         <button
