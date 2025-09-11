@@ -13,6 +13,7 @@ export default function applicants() {
       <Consultations />
       <Improve />
       <Personality />
+      
     </main>
   );
 }
