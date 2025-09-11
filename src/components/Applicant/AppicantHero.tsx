@@ -14,13 +14,13 @@ export default function AppicantHero() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
           <div>
-            <div className="bg-white   pb-10">
+            <div className="bg-white rounded-4xl  pb-10">
               <Image
                 src="/images/find4.png"
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover w-full h-auto"
+                className="object-cover rounded-4xl w-full h-auto"
               />
               <div className="px-10 py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">
@@ -37,13 +37,13 @@ export default function AppicantHero() {
             </div>
           </div>
           <div>
-            <div className="bg-white  pb-10">
+            <div className="bg-white rounded-4xl  pb-10">
               <Image
                 src="/images/find3.png"
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover w-full h-auto"
+                className="object-cover rounded-4xl w-full h-auto"
               />
               <div className="px-10 py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">

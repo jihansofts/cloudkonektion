@@ -106,7 +106,7 @@ export default function Service() {
             </div>
           </div>
         </div>
-        <div className="lg:mt-20 md:mt-10 mt-5 bg-[#192C33] w-full ">
+        <div className="lg:mt-20 md:mt-10 mt-5 bg-[#192C33] rounded-4xl w-full ">
           <div className="grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 gap-4 p-10">
             <div>
               <h2 className="text-[40px] font-bold font-sans text-white">1</h2>

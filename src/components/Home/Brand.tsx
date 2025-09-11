@@ -14,7 +14,7 @@ const brand = [
   "/images/brand1.png",
   "/images/brand2.png",
   "/images/brand3.png",
-  "/images/brand4.png",
+  // "/images/brand4.png",
   "/images/brand5.png",
   "/images/brand6.png",
   "/images/brand7.png",
@@ -42,7 +42,7 @@ export default function Brand() {
   }
 
   return (
-    <section className="py-20 bg-[#F4F4F2]">
+    <section id="brand" className="py-20 bg-[#F4F4F2]">
       <div className="container max-w-7xl mx-auto px-4">
         <h4 className="text-secondary text-center text-[26px] font-bold">
           Trusted for Over 10 Years in HR by:

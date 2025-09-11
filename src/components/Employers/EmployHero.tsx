@@ -16,15 +16,15 @@ export default function EmployHero() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
           <div>
-            <div className="bg-white px-2  pb-10">
+            <div className="bg-white p-5 rounded-4xl ">
               <Image
                 src="/images/employee1.png"
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover w-full h-auto"
+                className="object-cover rounded-4xl w-full h-auto"
               />
-              <div className="px-10 py-5">
+              <div className=" py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">
                   Headhunting
                 </h2>
@@ -35,23 +35,23 @@ export default function EmployHero() {
                   lasting competitive advantage for your business.
                 </p>
               </div>
+              <Link href="/about">
+                <button className="text-[20px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary  px-10 py-3 w-full  hover:bg-[#06c1c1] duration-300">
+                  More Information
+                </button>
+              </Link>
             </div>
-            <Link href="/about">
-              <button className="text-[20px] cursor-pointer font-bold font-sans text-white bg-primary px-10 py-3 w-full  hover:bg-secondary duration-300">
-                More Information
-              </button>
-            </Link>
           </div>
           <div>
-            <div className="bg-white px-2  pb-10">
+            <div className="bg-white p-5 rounded-4xl">
               <Image
                 src="/images/employee2.png"
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover w-full h-auto"
+                className="object-cover rounded-4xl w-full h-auto"
               />
-              <div className="px-10 py-5">
+              <div className=" py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">
                   Recruiting
                 </h2>
@@ -62,13 +62,13 @@ export default function EmployHero() {
                   data-driven strategies, our recruiters ensure you connect with
                   talent that truly fits your business needs.
                 </p>
-              </div>
+              </div>{" "}
+              <Link href="/about">
+                <button className="text-[20px] cursor-pointer rounded-4xl font-bold font-sans text-white bg-primary px-10 py-3 w-full  hover:bg-[#06c1c1] duration-300">
+                  More Information
+                </button>
+              </Link>
             </div>
-            <Link href="/about">
-              <button className="text-[20px] cursor-pointer font-bold font-sans text-white bg-primary px-10 py-3 w-full  hover:bg-secondary duration-300">
-                More Information
-              </button>
-            </Link>
           </div>
         </div>
       </div>

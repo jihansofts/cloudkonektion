@@ -37,7 +37,7 @@ export default function Finding() {
 
             <div className="flex flex-col space-y-10">
               {/* First animated border image */}
-              <div className="p-[3px] rounded-full animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
+              <div className="p-[3px] rounded-full animate-border bg-gradient-to-r from-primary via-transparent to-primary">
                 <Image
                   src="/images/find2.png"
                   alt="Bob"
@@ -49,7 +49,7 @@ export default function Finding() {
               </div>
 
               {/* Second animated border image */}
-              <div className="p-[3px] rounded-full animate-border bg-gradient-to-r from-[#dd0525] via-transparent to-[#dd0525]">
+              <div className="p-[3px] rounded-full animate-border bg-gradient-to-r from-primary via-transparent to-primary">
                 <Image
                   src="/images/find3.png"
                   alt="Bob"

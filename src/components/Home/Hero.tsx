@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaPlayCircle } from "react-icons/fa";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,13 +35,15 @@ export default function Hero() {
               <p className="text-[14px] text-secondary text-normal font-sans mt-4">
                 A true unicorn, an exceptional professional whose expertise and
                 value are rare in the marketplace can feel like finding a needle
-                in a haystack. While others struggle to uncover such talent,
+                in a haystack. While others struggle to uncover such talent,{" "}
                 <strong>Cloud Konektion</strong> excels at delivering the right
                 fit with precision and speed.
               </p>
-              <button className="text-primary font-semibold font-sans mt-4">
+              <Link
+                href="#brand"
+                className="text-primary font-semibold font-sans mt-5 block">
                 <IoArrowDownCircleOutline className="text-6xl" />
-              </button>
+              </Link>
             </div>
 
             <div className="col-span-1 flex justify-center">
