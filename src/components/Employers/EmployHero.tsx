@@ -22,7 +22,7 @@ export default function EmployHero() {
                 alt="Employers"
                 width={600}
                 height={600}
-                className="object-cover rounded-4xl w-full h-auto"
+                className="object-cover rounded-4xl w-full max-h-[455px] "
               />
               <div className=" py-5">
                 <h2 className="text-[30px] text-secondary font-bold font-sans">
@@ -36,7 +36,7 @@ export default function EmployHero() {
                 </p>
               </div>
               <Link href="/about">
-                <button className="text-[20px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary  px-10 py-3 w-full  hover:bg-[#06c1c1] duration-300">
+                <button className="text-[20px] rounded-4xl cursor-pointer font-bold font-sans text-white bg-primary  px-10 py-3 w-full  hover:bg-secondary duration-300">
                   More Information
                 </button>
               </Link>
@@ -64,7 +64,7 @@ export default function EmployHero() {
                 </p>
               </div>{" "}
               <Link href="/about">
-                <button className="text-[20px] cursor-pointer rounded-4xl font-bold font-sans text-white bg-primary px-10 py-3 w-full  hover:bg-[#06c1c1] duration-300">
+                <button className="text-[20px] cursor-pointer rounded-4xl font-bold font-sans text-white bg-primary px-10 py-3 w-full  hover:bg-secondary duration-300">
                   More Information
                 </button>
               </Link>
