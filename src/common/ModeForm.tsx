@@ -31,7 +31,7 @@ export default function ModeForm({ isOpen, setIsOpen }: ModeFormProps) {
 
             {/* Form */}
             <form
-              action="https://formsubmit.co/help@cloudkonektion.eu"
+              action="https://formsubmit.co/007ffadb0cff7326b25d53e5066eca38"
               method="POST"
               className="space-y-4">
               <input
