@@ -27,7 +27,7 @@ export default function Footer() {
 
           <div className="mt-6">
             <Image
-              src="/Recruitment4u-single.jpeg"
+              src="/logo2.jpeg"
               alt="Cloud Konektion"
               width={150}
               height={200}
@@ -127,13 +127,13 @@ export default function Footer() {
         <div className="space-y-5">
           <h3 className="text-lg font-bold mb-3">Office</h3>
           <div className="space-y-3">
-            <h4 className="text-[20px]">England</h4>
+            <h4 className="text-[16px] font-bold">Address:</h4>
             <p className="flex items-center gap-2">
               <a
                 href="https://www.google.com/maps/place/112-116+Whitechapel+Rd,+Greater,+London+E1+1JE,+UK/@51.7663045,0.2966749,7.5z/data=!4m6!3m5!1s0x48761ccc7c9cb58b:0x837ef31a0b99463!8m2!3d51.5179036!4d-0.0640677!16s%2Fg%2F11y7qkpf90?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[12px] hover:text-primary">
+                className="text-[16px] hover:text-primary">
                 112-116 Whitechapel Road, London, England, E1 1JE
               </a>
             </p>

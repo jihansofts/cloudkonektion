@@ -16,7 +16,7 @@ export default function Banner() {
               className="object-cover rounded-r-4xl w-full h-full"
             />
           </div>
-          <div className="col-span-5">
+          <div className="col-span-5 px-4">
             <div className="flex flex-col justify-center items-start">
               {/* <h2 className="text-[52px] font-bold font-sans mt-4 text-secondary">
                 RabotaNet Recruitment Company

@@ -22,7 +22,7 @@ export default function Hero() {
           />
         </div>
 
-        <div className="container max-w-7xl mx-auto relative z-10 h-full flex justify-between w-full px-4">
+        <div className="container max-w-7xl lg:mt-0 md:mt-0 mt-20 sm:mt-20 mx-auto relative z-10 h-full flex justify-between w-full px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-between items-center">
             <div className="col-span-1 w-full">
               <span className="text-[17px] text-primary font-normal font-sans">
