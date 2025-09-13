@@ -127,14 +127,14 @@ export default function Footer() {
         <div className="space-y-5">
           <h3 className="text-lg font-bold mb-3">Office</h3>
           <div className="space-y-3">
-            <h4 className="text-[20px]">Malta</h4>
+            <h4 className="text-[20px]">England</h4>
             <p className="flex items-center gap-2">
               <a
-                href="https://www.google.com/maps/place/60+St.Joseph's+Street,+Il-Belt+Valletta,+Malta/@35.9007508,14.5131508,17z/data=!3m1!4b1!4m5!3m4!1s0x130e452977901537:0x18a22beaac790ffc!8m2!3d35.9007465!4d14.5157257?entry=ttu&g_ep=EgoyMDI1MDkwNy4wIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/112-116+Whitechapel+Rd,+Greater,+London+E1+1JE,+UK/@51.7663045,0.2966749,7.5z/data=!4m6!3m5!1s0x48761ccc7c9cb58b:0x837ef31a0b99463!8m2!3d51.5179036!4d-0.0640677!16s%2Fg%2F11y7qkpf90?entry=ttu&g_ep=EgoyMDI1MDkxMC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[12px] hover:text-primary">
-                60, ST. JOSEPH STREET, ISLA, Malta
+                112-116 Whitechapel Road, London, England, E1 1JE
               </a>
             </p>
           </div>

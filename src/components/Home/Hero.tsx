@@ -62,13 +62,13 @@ export default function Hero() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+            className="fixed  inset-0 bg-black/70 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}>
             {/* Modal Content */}
             <motion.div
-              className="bg-black rounded-lg overflow-hidden w-[100%] max-w-7xl relative"
+              className="bg-black   rounded-lg overflow-hidden w-[100%] max-w-7xl relative"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}>
@@ -85,7 +85,7 @@ export default function Hero() {
                   width="100%"
                   height="100%"
                   src="https://res.cloudinary.com/dtw7qhd69/video/upload/v1757504655/Cloud_Konection_xdkxpe.mp4"
-                  title="YouTube video player"
+                  title="video player"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen></iframe>
