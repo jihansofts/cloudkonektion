@@ -91,7 +91,7 @@ export default function Footer() {
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.linkedin.com/company/107980266/admin/dashboard/"
+              href="https://www.linkedin.com/company/cloud-konektion/"
               className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
               <FaLinkedinIn />
             </Link>
