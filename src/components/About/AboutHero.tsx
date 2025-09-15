@@ -4,7 +4,7 @@ export default function AboutHero() {
   return (
     <section className="py-20 bg-[#F4F4F2]">
       <div className="container mx-auto max-w-7xl px-4">
-        <div className="max-w-2xl  flex flex-col ">
+        <div className="max-w-2xl mt-12  flex flex-col ">
           <span className="text-[16px] font-sans font-bold text-primary mb-4">
             ABOUT US
           </span>

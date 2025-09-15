@@ -1,16 +1,17 @@
 // components/Footer.tsx
 "use client";
 
-// import {
-//   FaFacebookF,
-//   FaInstagram,
-//   FaYoutube,
-//   FaTiktok,
-//   FaPinterest,
-// } from "react-icons/fa";
-// import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaPinterest,
+  FaTiktok,
+  FaYoutube,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   return (
@@ -51,50 +52,57 @@ export default function Footer() {
             </Link>
           </p>
           {/* Social icons */}
-          {/* <div className="flex space-x-3 mt-6">
+          <div className="flex space-x-3 mt-6">
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.facebook.com/RabotaNet00"
+              href="https://www.facebook.com/cloudkonektion0"
               className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
               <FaFacebookF />
             </Link>
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              href="https://www.instagram.com/dizi.rabotanet"
+              href="https://www.instagram.com/cloudkonektion/"
               className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
               <FaInstagram />
             </Link>
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              href="http://www.youtube.com/@RabotaNet01"
+              href="https://www.youtube.com/@cloudkonektion0"
               className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
               <FaYoutube />
             </Link>
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              href="https://x.com/RabotaNet01"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaXTwitter />
-            </Link>
-            <Link
-              rel="noopener noreferrer"
-              target="_blank"
-              href="www.tiktok.com/@rabotanet1"
+              href="https://www.tiktok.com/@cloudkonektion"
               className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
               <FaTiktok />
             </Link>
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              href="www.pinterest.com/dizirabotanet/"
+              href="https://x.com/cloudkonektion"
+              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
+              <FaXTwitter />
+            </Link>
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/company/107980266/admin/dashboard/"
+              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
+              <FaLinkedinIn />
+            </Link>
+            <Link
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.pinterest.com/cloudkonektion/"
               className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
               <FaPinterest />
             </Link>
-          </div> */}
+          </div>
         </div>
 
         {/* Right Section */}
