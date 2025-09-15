@@ -110,22 +110,22 @@ export default function Footer() {
           <h3 className="text-lg font-bold mb-3">Links</h3>
           <ul className="space-y-2">
             <li>
-              <Link href="/" className="hover:text-red-400">
+              <Link href="/" className="hover:text-primary">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/employers" className="hover:text-red-400">
+              <Link href="/employers" className="hover:text-primary">
                 Employers
               </Link>
             </li>
             <li>
-              <Link href="/applicants" className="hover:text-red-400">
+              <Link href="/applicants" className="hover:text-primary">
                 Applicants
               </Link>
             </li>
             <li>
-              <Link href="/about" className="hover:text-red-400">
+              <Link href="/about" className="hover:text-primary">
                 About Us
               </Link>
             </li>
