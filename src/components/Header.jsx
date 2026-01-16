@@ -53,16 +53,15 @@ const Header = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
         isScrolled ? "bg-white shadow-md" : "bg-[#F4F4F2]"
-      }`}
-    >
+      }`}>
       <div className="container mx-auto flex items-center justify-between py-3 px-4">
         <a href="/" className="flex items-center gap-2">
           <img
             src="/logo.png"
             alt="Logo"
             width={120}
-            height={40}
-            className="w-16 h-auto"
+            height={100}
+            className="w-20 h-auto"
           />
         </a>
 
@@ -75,8 +74,7 @@ const Header = () => {
                 currentPath === item.href
                   ? "text-primary font-semibold"
                   : "text-gray-800 hover:text-primary"
-              }`}
-            >
+              }`}>
               {item.label}
             </a>
           ))}
@@ -87,8 +85,7 @@ const Header = () => {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="hidden md:inline-block cursor-pointer bg-[#1599b9] text-white font-bold px-5 py-2 rounded-full hover:bg-[#12819c] transition-colors"
-          >
+            className="hidden md:inline-block cursor-pointer bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-secondary transition-colors">
             {t("nav.contact")}
           </button>
 
@@ -96,8 +93,7 @@ const Header = () => {
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
               onBlur={() => setTimeout(() => setIsLangOpen(false), 150)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-colors shadow-sm min-w-[120px]"
-            >
+              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-colors shadow-sm min-w-[120px]">
               <ReactCountryFlag
                 countryCode={currentLanguage.country}
                 svg
@@ -122,8 +118,7 @@ const Header = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-              >
+                className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -132,8 +127,7 @@ const Header = () => {
                       i18n.language === lang.code
                         ? "bg-blue-50 text-blue-600 font-semibold"
                         : "text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
+                    }`}>
                     <ReactCountryFlag
                       countryCode={lang.country}
                       svg
@@ -156,8 +150,7 @@ const Header = () => {
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
               onBlur={() => setTimeout(() => setIsLangOpen(false), 150)}
-              className="flex items-center gap-1 p-2 rounded-lg bg-white border border-gray-200 shadow-sm"
-            >
+              className="flex items-center gap-1 p-2 rounded-lg bg-white border border-gray-200 shadow-sm">
               <ReactCountryFlag
                 countryCode={currentLanguage.country}
                 svg
@@ -179,8 +172,7 @@ const Header = () => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.2 }}
-                className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-              >
+                className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
                 {languages.map((lang) => (
                   <button
                     key={lang.code}
@@ -189,8 +181,7 @@ const Header = () => {
                       i18n.language === lang.code
                         ? "bg-blue-50 text-blue-600 font-semibold"
                         : "text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
+                    }`}>
                     <ReactCountryFlag
                       countryCode={lang.country}
                       svg
@@ -209,8 +200,7 @@ const Header = () => {
 
           <button
             className="text-2xl text-gray-800 p-1 hover:bg-gray-100 rounded-full transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
+            onClick={() => setIsMenuOpen(!isMenuOpen)}>
             {isMenuOpen ? <HiX /> : <HiMenu />}
           </button>
         </div>
@@ -221,8 +211,7 @@ const Header = () => {
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white shadow-lg border-t"
-        >
+          className="md:hidden bg-white shadow-lg border-t">
           <nav className="flex flex-col p-4 gap-3">
             {navItems.map((item) => (
               <a
@@ -233,8 +222,7 @@ const Header = () => {
                   currentPath === item.href
                     ? "text-primary font-semibold bg-blue-50"
                     : "text-gray-800 hover:bg-gray-50"
-                }`}
-              >
+                }`}>
                 {item.label}
               </a>
             ))}
@@ -252,8 +240,7 @@ const Header = () => {
                       i18n.language === lang.code
                         ? "bg-blue-50 text-blue-600 font-semibold"
                         : "text-gray-700 hover:bg-gray-50"
-                    }`}
-                  >
+                    }`}>
                     <ReactCountryFlag
                       countryCode={lang.country}
                       svg
@@ -273,8 +260,7 @@ const Header = () => {
                 setIsOpen(true);
                 setIsMenuOpen(false);
               }}
-              className="bg-[#18a4c7] text-white font-bold py-3 px-4 rounded-full text-center mt-4 hover:bg-[#1599b9] transition-colors"
-            >
+              className="bg-[#18a4c7] text-white font-bold py-3 px-4 rounded-full text-center mt-4 hover:bg-[#1599b9] transition-colors">
               {t("nav.contact")}
             </button>
           </nav>

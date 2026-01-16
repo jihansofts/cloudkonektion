@@ -34,7 +34,7 @@ const WhatValues = () => {
               key={index}
               className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col items-start text-start"
             >
-              <div className="mb-4 p-4 bg-[#46C0DC] rounded-full">
+              <div className="mb-4 p-4 bg-primary rounded-full">
                 {value.icon}
               </div>
               <h3 className="text-xl font-semibold mb-4 text-gray-800">

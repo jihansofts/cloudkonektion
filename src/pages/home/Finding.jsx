@@ -18,20 +18,21 @@ const Finding = () => {
               {t("homepage.finding.findBig2Heading")}
             </h5>
             <p className="text-[14px] text-secondary text-normal font-sans mt-4">
-              <strong>{t("homepage.finding.findParagraph1")}</strong> {t("homepage.finding.findParagraph2")}
+              <strong>{t("homepage.finding.findParagraph1")}</strong>{" "}
+              {t("homepage.finding.findParagraph2")}
             </p>
           </div>
 
           <div className="col-span-1 flex lg:flex-row flex-col md:flex-col justify-center items-center space-x-10">
-            <div className="p-[3px] w-[200px] h-[200px]  rounded-[50%] animate-border bg-gradient-to-r from-primary via-transparent to-primary">
+            <div className="p-[3px] w-[200px] h-[200px]  rounded-[50%] ">
               <div className="bg-white  rounded-[50%] ">
                 <img
                   src="/Cloud Konektion logo black-01.png"
                   alt="Finding"
                   width={300}
-                  height={300}
+                  height={400}
                   priority
-                  className="rounded-full object-cover"
+                  className=" object-cover"
                 />
               </div>
             </div>

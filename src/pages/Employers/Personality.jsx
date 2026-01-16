@@ -11,8 +11,8 @@ const Personality = () => {
         </h2>
         <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
           <div className="flex justify-start items-start mb-6">
-            <div className="bg-secondary p-4 rounded-full">
-              <FaSearchDollar className="text-primary text-3xl" />
+            <div className="bg-primary p-4 rounded-full">
+              <FaSearchDollar className="text-white text-3xl" />
             </div>
           </div>
 

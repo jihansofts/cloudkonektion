@@ -14,8 +14,8 @@ const Advantages = () => {
           {/* First Advantage */}
           <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
             <div className="flex justify-center mb-6">
-              <div className="bg-secondary p-4 rounded-full">
-                <FaUserClock className="text-primary text-3xl" />
+              <div className="bg-primary p-4 rounded-full">
+                <FaUserClock className="text-white text-3xl" />
               </div>
             </div>
             <h3 className="lg:text-[21px] md:text-2xl font-display font-medium mb-4">
@@ -29,8 +29,8 @@ const Advantages = () => {
           {/* Second Advantage */}
           <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
             <div className="flex justify-center mb-6">
-              <div className="bg-secondary p-4 rounded-full">
-                <FaSearchDollar className="text-primary text-3xl" />
+              <div className="bg-primary p-4 rounded-full">
+                <FaSearchDollar className="text-white text-3xl" />
               </div>
             </div>
             <h3 className="lg:text-[21px] md:text-2xl font-display font-medium mb-4">
@@ -45,7 +45,7 @@ const Advantages = () => {
           <div className="bg-white p-8 rounded-lg shadow-md text-start hover:border border-secondary cursor-pointer">
             <div className="flex justify-center mb-6">
               <div className="bg-secondary p-4 rounded-full">
-                <FaClock className="text-primary text-3xl" />
+                <FaClock className="text-white text-3xl" />
               </div>
             </div>
             <h3 className="lg:text-[21px] md:text-2xl font-display font-medium mb-4">
