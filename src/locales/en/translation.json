@@ -82,7 +82,7 @@
     "banner": {
       "bannerHeading": "Specialised Recruitment Services – Powered by Our Expertise",
       "bannerPara1": "In addition to standard hiring solutions,",
-      "bannerPara2": "Cloud Konektion",
+      "bannerPara2": "Karyera Plus",
       "bannerPara3": "delivers specialised recruitment support tailored to businesses with unique workforce needs.",
       "bannerSecHeading": "Expertise across industries",
       "bannerThiHeading": "Fast and reliable hiring",
@@ -104,13 +104,13 @@
     },
     "headHunting": {
       "headHuntingTopHeading": "Headhunting",
-      "headHuntingHeading": "How Headhunting Works at Cloud Konektion",
-      "headHuntingPara": "Cloud Konektion’s headhunters specialise in sourcing high-calibre professionals currently excelling in other organisations. These individuals often bring the exact skills and experience your business needs. Through a targeted approach, we identify, engage, and present them with tailored opportunities that align both with their career ambitions and your company’s goals."
+      "headHuntingHeading": "How Headhunting Works at Karyera Plus",
+      "headHuntingPara": "Karyera Plus’s headhunters specialise in sourcing high-calibre professionals currently excelling in other organisations. These individuals often bring the exact skills and experience your business needs. Through a targeted approach, we identify, engage, and present them with tailored opportunities that align both with their career ambitions and your company’s goals."
     },
     "success": {
       "successHeading": "Why Headhunting Matters for Your Success",
       "successPara1": "In today’s competitive labour market, attracting and retaining top performers is vital. Many of the most talented professionals are not actively seeking new roles. Through our headhunting services,",
-      "successPara2": "Cloud Konektion",
+      "successPara2": "Karyera Plus",
       "successPara3": "enables you to reach beyond traditional channels and connect directly with this exceptional talent pool."
     },
     "advantage": {
@@ -128,12 +128,17 @@
     },
     "workRecuit": {
       "workRecuitTopHeading": "Recruiting",
-      "workRecuitHeading": "How Recruiting Works at Cloud Konektion",
+      "workRecuitHeading": "How Recruiting Works at Karyera Plus",
       "workRecuitPara": "Our recruitment specialists follow a structured process designed to secure the right fit for your organisation. From advertising roles on targeted platforms and meticulously screening CVs to coordinating interviews and conducting detailed reference checks, every step is handled with care. Beyond skills and experience, we prioritise cultural and value alignment to ensure candidates integrate seamlessly into your team, helping you build strong, lasting workforces that drive long-term success."
     },
     "successSection": {
       "title": "Why Recruiting Is Essential to Business Success",
-      "description": "Recruitment lays the foundation for a productive and motivated workforce. At Cloud Konektion, we recognise that the right hiring decisions significantly influence employee morale, efficiency, and company culture. This is why we adapt every recruitment process to meet the specific needs of each employer we work with."
+      "description": "Recruitment lays the foundation for a productive and motivated workforce. At Karyera Plus, we recognise that the right hiring decisions significantly influence employee morale, efficiency, and company culture. This is why we adapt every recruitment process to meet the specific needs of each employer we work with."
+    },
+    "recruiting": {
+      "title": "Recruiting",
+      "subtitle1": "Why Headhunting Matters for Your Success",
+      "description1": "In today’s competitive labour market, attracting and retaining top performers is vital. Many of the most talented professionals  are not actively seeking new roles. Through our headhunting  services, <strong>Karyera Plus</strong> enables you to reach beyond traditional channels and connect directly with this exceptional talent pool."
     },
     "parsonality": {
       "parsonalityHeading": "Personality Assessments",
@@ -173,7 +178,7 @@
       "heroTopHeading": "ABOUT US",
       "heroHeading": "10 Years of Recruitment Expertise",
       "heroPara1": "For a decade, ",
-      "heroPara2": "Cloud Konektion",
+      "heroPara2": "Karyera Plus",
       "heroPara3": "has been a trusted name in recruitment and headhunting, specialising in filling challenging positions across a wide range of sectors. Many of these roles demand rare skill sets or unique language combinations, and our team combines proven expertise with AI-powered tools and modern technologies to deliver faster, more accurate searches and targeted outreach. Beyond recruitment, we work flexibly online, stay engaged through professional networking events, and, with the support of strategic partnerships, provide clients access to additional services in education and personal development."
     },
     "whatValue": {
@@ -187,7 +192,7 @@
     }
   },
   "footer": {
-    "footerFront": "Cloud Konektion",
+    "footerFront": "Karyera Plus",
     "footerPara": "We find exceptional talent for your company",
     "footerContact": "Contact us",
     "footerOffice": "Office",

@@ -27,7 +27,7 @@ const Finding = () => {
             <div className="p-[3px] w-[200px] h-[200px]  rounded-[50%] ">
               <div className="bg-white  rounded-[50%] ">
                 <img
-                  src="/Cloud Konektion logo black-01.png"
+                  src="/finding.png"
                   alt="Finding"
                   width={300}
                   height={400}

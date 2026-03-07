@@ -82,7 +82,7 @@
     "banner": {
       "bannerHeading": "Servicii de recrutare specializate – bazate pe expertiza noastră",
       "bannerPara1": "Pe lângă soluțiile standard de angajare,",
-      "bannerPara2": "Cloud Konektion",
+      "bannerPara2": "Karyera Plus",
       "bannerPara3": "oferă suport specializat în recrutare adaptat afacerilor cu nevoi unice de forță de muncă.",
       "bannerSecHeading": "Expertiză în diverse industrii",
       "bannerThiHeading": "Angajare rapidă și de încredere",
@@ -104,17 +104,22 @@
     },
     "headHunting": {
       "headHuntingTopHeading": "Head-hunting",
-      "headHuntingHeading": "Cum funcționează Head-hunting-ul la Cloud Konektion",
+      "headHuntingHeading": "Cum funcționează Head-hunting-ul la Karyera Plus",
       "headHuntingPara": "Headhunterii Karyera Plussunt specializați în identificarea profesioniștilor de înalt calibru care excelează în prezent în alte organizații. Acești indivizi aduc adesea exact competențele și experiența de care afacerea dvs. are nevoie. Printr-o abordare țintită, îi identificăm, îi implicăm și le prezentăm oportunități personalizate care se aliniază atât cu ambițiile lor de carieră, cât și cu obiectivele companiei dvs."
+    },
+    "recruiting": {
+      "title": "Recrutare",
+      "subtitle1": "De ce contează headhuntingul pentru succesul tău",
+      "description1": "În piața muncii extrem de competitivă de astăzi, atragerea și păstrarea profesioniștilor de top este esențială. Mulți dintre cei mai talentați specialiști nu caută în mod activ noi oportunități. Prin serviciile noastre de headhunting, <strong>Karyera Plus</strong> îți permite să depășești canalele tradiționale și să te conectezi direct cu acest grup excepțional de talente."
     },
     "success": {
       "successHeading": "De ce Head-hunting-ul contează pentru succesul dvs.",
       "successPara1": "Pe piața competitivă a muncii de astăzi, atragerea și păstrarea celor mai buni performeri este vitală. Mulți dintre cei mai talentați profesioniști nu caută activ noi roluri. Prin serviciile noastre de head-hunting,",
-      "successPara2": "Cloud Konektion",
+      "successPara2": "Karyera Plus",
       "successPara3": "vă permite să depășiți canalele tradiționale și să vă conectați direct cu acest grup excepțional de talente."
     },
     "advantage": {
-      "advantageTopHeading": "Avantajele Head-hunting-ului Cloud Konektion",
+      "advantageTopHeading": "Avantajele Head-hunting-ului Karyera Plus",
       "advantageHeadingStats1": "Acces la talente pasive",
       "advantageParaStats1": "Interacționați cu profesioniști care nu caută activ locuri de muncă, oferindu-i afacerii dvs. oportunitatea de a asigura candidați rari și excepționali.",
       "advantageHeadingStats2": "Expertiză concentrată pe industrie",
@@ -128,12 +133,12 @@
     },
     "workRecuit": {
       "workRecuitTopHeading": "Recrutare",
-      "workRecuitHeading": "Cum funcționează recrutarea la Cloud Konektion",
+      "workRecuitHeading": "Cum funcționează recrutarea la Karyera Plus",
       "workRecuitPara": "Specialiștii noștri în recrutare urmează un proces structurat conceput pentru a asigura potrivirea ideală pentru organizația dvs. De la publicarea rolurilor pe platforme țintite și examinarea atentă a CV-urilor până la coordonarea interviurilor și efectuarea verificărilor detaliate de referință, fiecare pas este realizat cu atenție. Dincolo de competențe și experiență, prioritizăm alinierea culturală și valorică pentru a asigura integrarea fără probleme a candidaților în echipa dvs., ajutându-vă să construiți forțe de muncă puternice și durabile care generează succes pe termen lung."
     },
     "successSection": {
       "title": "De ce recrutarea este esențială pentru succesul afacerii",
-      "description": "Recrutarea pune bazele unei forțe de muncă productive și motivate. La Cloud Konektion, recunoaștem că deciziile corecte de angajare influențează semnificativ moralul angajaților, eficiența și cultura companiei. De aceea, adaptăm fiecare proces de recrutare pentru a răspunde nevoilor specifice ale fiecărui angajator cu care lucrăm."
+      "description": "Recrutarea pune bazele unei forțe de muncă productive și motivate. La Karyera Plus, recunoaștem că deciziile corecte de angajare influențează semnificativ moralul angajaților, eficiența și cultura companiei. De aceea, adaptăm fiecare proces de recrutare pentru a răspunde nevoilor specifice ale fiecărui angajator cu care lucrăm."
     },
     "parsonality": {
       "parsonalityHeading": "Evaluări de personalitate",
@@ -173,7 +178,7 @@
       "heroTopHeading": "DESPRE NOI",
       "heroHeading": "10 Ani de Expertiză în Recrutare",
       "heroPara1": "Timp de un deceniu, ",
-      "heroPara2": "Cloud Konektion",
+      "heroPara2": "Karyera Plus",
       "heroPara3": "a fost un nume de încredere în recrutare și head-hunting, specializându-se în ocuparea pozițiilor dificile în diverse sectoare. Multe dintre aceste roluri necesită seturi rare de abilități sau combinații unice de limbi, iar echipa noastră combină expertiza dovedită cu instrumente bazate pe AI și tehnologii moderne pentru a oferi căutări mai rapide, mai precise și outreach țintit. Dincolo de recrutare, lucrăm flexibil online, rămânem implicați prin evenimente profesionale de networking și, cu sprijinul parteneriatelor strategice, oferim clienților acces la servicii suplimentare în educație și dezvoltare personală."
     },
     "whatValue": {
@@ -187,7 +192,7 @@
     }
   },
   "footer": {
-    "footerFront": "Cloud Konektion",
+    "footerFront": "Karyera Plus",
     "footerPara": "Găsim talente excepționale pentru compania dvs.",
     "footerContact": "Contactați-ne",
     "footerOffice": "Birou",

@@ -36,8 +36,7 @@ const Hero = () => {
               </p>
               <Link
                 href="#brand"
-                className="text-primary font-semibold font-sans mt-5 block"
-              >
+                className="text-primary font-semibold font-sans mt-5 block">
                 <IoArrowDownCircleOutline className="text-6xl" />
               </Link>
             </div>
@@ -45,8 +44,7 @@ const Hero = () => {
             <div className="col-span-1 flex justify-center">
               <button
                 className="cursor-pointer"
-                onClick={() => setIsOpen(true)}
-              >
+                onClick={() => setIsOpen(true)}>
                 <FaPlayCircle className="text-6xl  text-primary" />
               </button>
             </div>
@@ -60,18 +58,15 @@ const Hero = () => {
             className="fixed  inset-0 bg-black/70 flex items-center justify-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-          >
+            exit={{ opacity: 0 }}>
             <motion.div
               className="bg-black   rounded-lg overflow-hidden w-[100%] max-w-7xl relative"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
-              exit={{ scale: 0.8 }}
-            >
+              exit={{ scale: 0.8 }}>
               <button
                 onClick={() => setIsOpen(false)}
-                className="absolute cursor-pointer top-3 right-3 text-white text-2xl z-10"
-              >
+                className="absolute cursor-pointer top-3 right-3 text-white text-2xl z-10">
                 ✕
               </button>
 
@@ -79,12 +74,11 @@ const Hero = () => {
                 <iframe
                   width="100%"
                   height="100%"
-                  src="https://res.cloudinary.com/dtw7qhd69/video/upload/v1757504655/Cloud_Konection_xdkxpe.mp4"
+                  src="https://res.cloudinary.com/dtw7qhd69/video/upload/v1768634988/karyera_dnalsa.mp4"
                   title="video player"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
-                  allowFullScreen
-                ></iframe>
+                  allowFullScreen></iframe>
               </div>
             </motion.div>
           </motion.div>
