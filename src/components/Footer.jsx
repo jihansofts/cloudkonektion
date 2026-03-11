@@ -125,18 +125,18 @@ const Footer = () => {
         </div>
 
         <div className="space-y-5">
-          <h3 className="text-lg font-bold mb-3">{t("footer.footerOffice")}</h3>
+          <h3 className="text-lg font-bold mb-3">
+            Base of Operations : Kuwait ….
+          </h3>
           <div className="space-y-3">
-            <h4 className="text-[16px] font-bold">
-              {t("footer.footerAddress")}
-            </h4>
+            {/* <h4 className="text-[16px] font-bold"></h4> */}
             <p className="flex items-center gap-2">
               <a
                 href="https://www.google.com/maps/place/%D8%A8%D8%B1%D8%AC+%D8%AE%D9%84%D9%8A%D9%81%D8%A9+%D8%A7%D9%84%D8%B9%D9%86%D8%B2%D9%8A%D8%8C+21+Ahmad+Al+Jaber+St,+%D9%85%D8%AF%D9%8A%D9%86%D8%A9+13017,+Kuwait%E2%80%AD/@29.3826247,47.984253,17z/data=!3m1!4b1!4m6!3m5!1s0x3fcf8491926f25e3:0x5187dd048c32c8e8!8m2!3d29.3826201!4d47.9868279!16s%2Fg%2F11nnkw8l1z?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[16px] hover:text-primary">
-                21 Ahmad Al Jaber St, Kuwait City, Kuwait
+                Registered Office : 220 The Vale, London, England, NW11 8SR
               </a>
             </p>
           </div>
