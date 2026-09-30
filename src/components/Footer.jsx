@@ -1,153 +1,108 @@
-import React from "react";
-import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
   FaPinterest,
-  FaTiktok,
   FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { PiEnvelopeSimple, PiMapPin } from "react-icons/pi";
+import { COMPANY } from "../data/site";
+import { FooterForm } from "./forms";
+import { Logo } from "./Header";
+import { Container } from "./ui";
 
-const Footer = () => {
-  const { t } = useTranslation();
-  return (
-    <footer className="bg-[#1d1d1d] text-white py-12">
-      <div className="container  mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div>
-          <h2 className="text-2xl font-bold">
-            {t("footer.footerFront")} <span className="text-primary">®</span>
-          </h2>
-          <p className="text-sm text-primary mt-2">{t("footer.footerPara")}</p>
+const QUICK_LINKS = [
+  { label: "FAQ", to: "/faq" },
+  { label: "Accreditations & Compliance", to: "/compliance" },
+  { label: "Privacy Policy", to: "/privacy-policy" },
+  { label: "Terms & Cookie Policy", to: "/terms" },
+];
 
-          <div className="mt-6">
-            <img
-              src="/logo.png"
-              alt="Karyera Plus"
-              width={150}
-              height={200}
-              className="h-auto w-40"
-            />
-          </div>
-        </div>
+const SOCIALS = [
+  { href: COMPANY.socials.facebook, icon: FaFacebookF, label: "Facebook" },
+  { href: COMPANY.socials.instagram, icon: FaInstagram, label: "Instagram" },
+  { href: COMPANY.socials.youtube, icon: FaYoutube, label: "YouTube" },
+  { href: COMPANY.socials.x, icon: FaXTwitter, label: "X" },
+  { href: COMPANY.socials.linkedin, icon: FaLinkedinIn, label: "LinkedIn" },
+  { href: COMPANY.socials.pinterest, icon: FaPinterest, label: "Pinterest" },
+];
 
-        <div>
-          <h3 className="text-lg font-bold mb-3">
-            {t("footer.footerContact")}
-          </h3>
+const Footer = () => (
+  <footer className="bg-ink text-cream">
+    <Container className="grid gap-14 py-16 lg:grid-cols-12 lg:py-20">
+      <div className="lg:col-span-4">
+        <Logo className="h-28 w-44" />
+        <p className="mt-6 max-w-xs font-display text-xl leading-snug text-cream/90">
+          {COMPANY.tagline}
+        </p>
 
-          <p className="flex items-center gap-2">
-            📧{" "}
-            <a href="mailto:help@karyeraplus.top" className="hover:underline">
-              help@karyeraplus.top
-            </a>
-          </p>
-          {/* Social icons */}
-          <div className="flex space-x-3 mt-6">
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.facebook.com/KayeraPlus"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaFacebookF />
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.instagram.com/karyeraplus01/"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaInstagram />
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.youtube.com/@KaryeraPlus01"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaYoutube />
-            </a>
-            {/* <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.tiktok.com/@cloudkonektion"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaTiktok />
-            </a> */}
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://x.com/KaryeraPlus01"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaXTwitter />
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.linkedin.com/company/karyera-plus/"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaLinkedinIn />
-            </a>
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              href="https://www.pinterest.com/karyeraplusb2b/"
-              className="p-2 border border-white hover:bg-white hover:text-black transition rounded">
-              <FaPinterest />
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-lg font-bold mb-3">{t("footer.footertext")}</h3>
-          <ul className="space-y-2">
-            <li>
-              <Link href="/" className="hover:text-primary">
-                {t("footer.footerLink1")}
+        <h3 className="mt-10 font-sans text-xs font-bold uppercase tracking-[0.2em] text-gold">
+          Quick Links
+        </h3>
+        <ul className="mt-4 space-y-2.5">
+          {QUICK_LINKS.map((l) => (
+            <li key={l.to}>
+              <Link to={l.to} className="text-cream/80 transition-colors hover:text-gold">
+                {l.label}
               </Link>
             </li>
-            <li>
-              <Link href="/employers" className="hover:text-primary">
-                {t("footer.footerLink2")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/applicants" className="hover:text-primary">
-                {t("footer.footerLink3")}
-              </Link>
-            </li>
-            <li>
-              <Link href="/about" className="hover:text-primary">
-                {t("footer.footerLink4")}
-              </Link>
-            </li>
-          </ul>
-        </div>
+          ))}
+        </ul>
 
-        <div className="space-y-5">
-          <h3 className="text-lg font-bold mb-3">
-            Base of Operations : Kuwait ….
-          </h3>
-          <div className="space-y-3">
-            {/* <h4 className="text-[16px] font-bold"></h4> */}
-            <p className="flex items-center gap-2">
-              <a
-                href="https://www.google.com/maps/place/%D8%A8%D8%B1%D8%AC+%D8%AE%D9%84%D9%8A%D9%81%D8%A9+%D8%A7%D9%84%D8%B9%D9%86%D8%B2%D9%8A%D8%8C+21+Ahmad+Al+Jaber+St,+%D9%85%D8%AF%D9%8A%D9%86%D8%A9+13017,+Kuwait%E2%80%AD/@29.3826247,47.984253,17z/data=!3m1!4b1!4m6!3m5!1s0x3fcf8491926f25e3:0x5187dd048c32c8e8!8m2!3d29.3826201!4d47.9868279!16s%2Fg%2F11nnkw8l1z?entry=ttu&g_ep=EgoyMDI2MDExMy4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-[16px] hover:text-primary">
-                Registered Office : 220 The Vale, London, England, NW11 8SR
-              </a>
-            </p>
-          </div>
-        </div>
+        <h3 className="mt-10 font-sans text-xs font-bold uppercase tracking-[0.2em] text-gold">
+          Registered Office
+        </h3>
+        <a
+          href={COMPANY.office.mapUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 flex gap-3 text-cream/80 transition-colors hover:text-gold">
+          <PiMapPin className="mt-1 shrink-0 text-lg text-sage" />
+          <span>
+            {COMPANY.name}, {COMPANY.office.full}
+          </span>
+        </a>
+        <a
+          href={`mailto:${COMPANY.email}`}
+          className="mt-3 flex items-center gap-3 text-cream/80 transition-colors hover:text-gold">
+          <PiEnvelopeSimple className="shrink-0 text-lg text-sage" />
+          {COMPANY.email}
+        </a>
       </div>
 
-      <div className="border-t border-gray-600 mt-10 pt-6 text-sm  text-gray-400 text-center md:text-left container max-w-7xl mx-auto px-6 ">
-        <p className="text-sm text-center">Copyright © 2025 Karyera Plus</p>
+      <div className="rounded-2xl border border-cream/10 bg-taupe/40 p-6 sm:p-10 lg:col-span-8">
+        <h3 className="text-2xl text-cream">Get in touch</h3>
+        <p className="mb-6 mt-2 text-cream/70">
+          Looking for work, or looking to hire? Choose one and send us your
+          details.
+        </p>
+        <FooterForm />
       </div>
-    </footer>
-  );
-};
+    </Container>
+
+    <div className="border-t border-cream/10">
+      <Container className="flex flex-col items-center justify-between gap-4 py-6 text-sm text-cream/60 sm:flex-row">
+        <p>
+          © {new Date().getFullYear()} {COMPANY.name}. All rights reserved.
+        </p>
+        <div className="flex gap-2">
+          {SOCIALS.map(({ href, icon: Ic, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="rounded-full border border-cream/15 p-2 text-cream/70 transition-colors hover:border-gold hover:text-gold">
+              <Ic />
+            </a>
+          ))}
+        </div>
+      </Container>
+    </div>
+  </footer>
+);
 
 export default Footer;

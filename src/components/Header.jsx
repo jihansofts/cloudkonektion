@@ -1,272 +1,198 @@
-import React, { useState, useEffect } from "react";
-import { HiMenu, HiX, HiChevronDown, HiGlobe } from "react-icons/hi";
-import { motion } from "framer-motion";
-import ReactCountryFlag from "react-country-flag";
-import ModeForm from "./ModeForm";
-import { useTranslation } from "react-i18next";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { PiArrowRight, PiCaretDown, PiList, PiX } from "react-icons/pi";
+import { SECTORS, SERVICES } from "../data/site";
+import { Container } from "./ui";
+
+export const Logo = ({ className = "h-12 w-20" }) => (
+  <span role="img" aria-label="Karyera Plus" className={`logo-mask block ${className}`} />
+);
+
+const NAV = [
+  { label: "About Us", to: "/about" },
+  {
+    label: "Services",
+    to: "/services",
+    children: SERVICES.map((s) => ({ label: s.name, to: `/services/${s.slug}` })),
+  },
+  {
+    label: "Occupations",
+    to: "/occupations",
+    children: SECTORS.slice(0, 5).map((s) => ({
+      label: s.name,
+      to: `/occupations#${s.slug}`,
+    })),
+  },
+  { label: "Industries We Serve", to: "/industries" },
+  { label: "Blog", to: "/blog" },
+];
+
+const linkCls = ({ isActive }) =>
+  `transition-colors ${isActive ? "text-gold" : "text-cream/85 hover:text-gold"}`;
+
+const AudienceToggle = ({ className = "" }) => (
+  <div className={`flex rounded-full border border-cream/15 p-1 text-sm ${className}`}>
+    {[
+      { label: "For Employers", to: "/employers" },
+      { label: "For Candidates", to: "/candidates" },
+    ].map((o) => (
+      <NavLink
+        key={o.to}
+        to={o.to}
+        className={({ isActive }) =>
+          `flex-1 whitespace-nowrap rounded-full px-3 py-1.5 text-center font-semibold transition-colors ${
+            isActive ? "bg-cream text-ink" : "text-cream/75 hover:text-cream"
+          }`
+        }>
+        {o.label}
+      </NavLink>
+    ))}
+  </div>
+);
 
 const Header = () => {
-  const { t, i18n } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false);
-  const [currentPath, setCurrentPath] = useState("/");
+  const [open, setOpen] = useState(false);
+  const [expanded, setExpanded] = useState(null);
+  const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
-    setCurrentPath(window.location.pathname);
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 24);
+      if (Math.abs(y - lastY) > 6) {
+        setHidden(y > lastY && y > 320);
+        lastY = y;
+      }
     };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navItems = [
-    { href: "/", label: t("nav.home") },
-    { href: "/employers", label: t("nav.employers") },
-    { href: "/applicants", label: t("nav.applicants") },
-    { href: "/about", label: t("nav.about") },
-  ];
+  useEffect(() => {
+    setOpen(false);
+    setExpanded(null);
+  }, [location.pathname, location.hash]);
 
-  const languages = [
-    { code: "en", name: "English", country: "US" },
-    { code: "mk", name: "Македонски", country: "MK" },
-    { code: "ro", name: "Română", country: "RO" },
-    { code: "sr", name: "Српски", country: "RS" },
-  ];
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+  }, [open]);
 
-  const changeLanguage = (langCode) => {
-    i18n.changeLanguage(langCode);
-    setIsLangOpen(false);
-    if (isMenuOpen) setIsMenuOpen(false);
-  };
-
-  const currentLanguage =
-    languages.find((lang) => lang.code === i18n.language) || languages[0];
+  // Lets sticky elements (e.g. the Occupations jump-nav) follow the header.
+  useEffect(() => {
+    document.documentElement.dataset.header = hidden && !open ? "hidden" : "shown";
+  }, [hidden, open]);
 
   return (
-    <motion.header
-      initial={{ y: -80, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 w-full z-50 transition-colors duration-300 ${
-        isScrolled ? "bg-white shadow-md" : "bg-[#F4F4F2]"
-      }`}>
-      <div className="container mx-auto flex items-center justify-between py-3 px-4">
-        <a href="/" className="flex items-center gap-2">
-          <img
-            src="/logo.png"
-            alt="Logo"
-            width={120}
-            height={100}
-            className="w-20 h-auto"
-          />
-        </a>
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out ${
+        scrolled || open ? "bg-ink shadow-lg shadow-black/20" : "bg-ink/80 backdrop-blur"
+      } ${hidden && !open ? "-translate-y-full" : ""}`}>
+      <Container className="flex h-20 items-center justify-between gap-6">
+        <Link to="/" aria-label="Karyera Plus home" className="shrink-0">
+          <Logo />
+        </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={`font-medium transition-colors ${
-                currentPath === item.href
-                  ? "text-primary font-semibold"
-                  : "text-gray-800 hover:text-primary"
-              }`}>
-              {item.label}
-            </a>
-          ))}
-
-          <div className={`fixed inset-0 ${isOpen ? "block" : "hidden"}`}>
-            <ModeForm isOpen={isOpen} setIsOpen={setIsOpen} />
-          </div>
-
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="hidden md:inline-block cursor-pointer bg-primary text-white font-bold px-5 py-2 rounded-full hover:bg-secondary transition-colors">
-            {t("nav.contact")}
-          </button>
-
-          <div className="relative ml-2">
-            <button
-              onClick={() => setIsLangOpen(!isLangOpen)}
-              onBlur={() => setTimeout(() => setIsLangOpen(false), 150)}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-gray-200 hover:border-gray-300 transition-colors shadow-sm min-w-[120px]">
-              <ReactCountryFlag
-                countryCode={currentLanguage.country}
-                svg
-                style={{
-                  width: "20px",
-                  height: "15px",
-                }}
-                title={currentLanguage.name}
-              />
-              <span className="text-sm font-medium text-gray-700 hidden lg:block">
-                {currentLanguage.name}
-              </span>
-              <HiChevronDown
-                className={`w-4 h-4 text-gray-500 transition-transform ${
-                  isLangOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {isLangOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
-                className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`flex items-center gap-3 w-full px-4 py-2 text-left transition-colors ${
-                      i18n.language === lang.code
-                        ? "bg-blue-50 text-blue-600 font-semibold"
-                        : "text-gray-700 hover:bg-gray-50"
-                    }`}>
-                    <ReactCountryFlag
-                      countryCode={lang.country}
-                      svg
-                      style={{
-                        width: "20px",
-                        height: "15px",
-                      }}
-                      title={lang.name}
-                    />
-                    <span className="text-sm">{lang.name}</span>
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </div>
+        <nav aria-label="Main" className="mr-auto hidden items-center gap-7 text-[15px] font-medium xl:flex">
+          {NAV.map((item) =>
+            item.children ? (
+              <div key={item.label} className="group relative">
+                <NavLink to={item.to} className={(s) => `flex items-center gap-1 py-7 ${linkCls(s)}`}>
+                  {item.label}
+                  <PiCaretDown className="text-xs transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
+                </NavLink>
+                <div className="invisible absolute left-0 top-full w-64 translate-y-1 opacity-0 transition-all group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100">
+                  <div className="overflow-hidden rounded-xl border border-cream/10 bg-taupe py-2 shadow-xl">
+                    {item.children.map((c) => (
+                      <Link
+                        key={c.to}
+                        to={c.to}
+                        className="block px-5 py-2.5 text-cream/85 transition-colors hover:bg-ink/50 hover:text-gold">
+                        {c.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <NavLink key={item.label} to={item.to} className={linkCls}>
+                {item.label}
+              </NavLink>
+            )
+          )}
         </nav>
 
-        <div className="flex items-center gap-3 md:hidden">
-          <div className="relative">
-            <button
-              onClick={() => setIsLangOpen(!isLangOpen)}
-              onBlur={() => setTimeout(() => setIsLangOpen(false), 150)}
-              className="flex items-center gap-1 p-2 rounded-lg bg-white border border-gray-200 shadow-sm">
-              <ReactCountryFlag
-                countryCode={currentLanguage.country}
-                svg
-                style={{
-                  width: "20px",
-                  height: "15px",
-                }}
-                title={currentLanguage.name}
-              />
-              <HiChevronDown
-                className={`w-3 h-3 text-gray-500 transition-transform ${
-                  isLangOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {isLangOpen && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.2 }}
-                className="absolute right-0 mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`flex items-center gap-3 w-full px-3 py-2 text-left transition-colors ${
-                      i18n.language === lang.code
-                        ? "bg-blue-50 text-blue-600 font-semibold"
-                        : "text-gray-700 hover:bg-gray-50"
-                    }`}>
-                    <ReactCountryFlag
-                      countryCode={lang.country}
-                      svg
-                      style={{
-                        width: "20px",
-                        height: "15px",
-                      }}
-                      title={lang.name}
-                    />
-                    <span className="text-sm">{lang.name}</span>
-                  </button>
-                ))}
-              </motion.div>
-            )}
-          </div>
-
-          <button
-            className="text-2xl text-gray-800 p-1 hover:bg-gray-100 rounded-full transition-colors"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            {isMenuOpen ? <HiX /> : <HiMenu />}
-          </button>
+        <div className="hidden items-center gap-4 xl:flex">
+          <AudienceToggle />
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 rounded-full bg-gold px-5 py-2.5 text-[15px] font-semibold text-ink transition-colors hover:bg-gold-deep">
+            Contact Us <PiArrowRight />
+          </Link>
         </div>
-      </div>
 
-      {isMenuOpen && (
-        <motion.div
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden bg-white shadow-lg border-t">
-          <nav className="flex flex-col p-4 gap-3">
-            {navItems.map((item) => (
-              <a
-                key={item.href}
-                href={item.href}
-                onClick={() => setIsMenuOpen(false)}
-                className={`font-medium py-3 px-4 rounded-lg transition-colors ${
-                  currentPath === item.href
-                    ? "text-primary font-semibold bg-blue-50"
-                    : "text-gray-800 hover:bg-gray-50"
-                }`}>
-                {item.label}
-              </a>
+        <button
+          className="rounded-full p-2 text-3xl text-cream xl:hidden"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}>
+          {open ? <PiX /> : <PiList />}
+        </button>
+      </Container>
+
+      {open && (
+        <div className="h-[calc(100dvh-5rem)] overflow-y-auto border-t border-cream/10 bg-ink xl:hidden">
+          <Container className="flex flex-col gap-1 py-6">
+            <AudienceToggle className="mb-4" />
+            {NAV.map((item) => (
+              <div key={item.label} className="border-b border-cream/10">
+                {item.children ? (
+                  <>
+                    <button
+                      className="flex w-full items-center justify-between py-4 text-lg text-cream"
+                      aria-expanded={expanded === item.label}
+                      onClick={() =>
+                        setExpanded(expanded === item.label ? null : item.label)
+                      }>
+                      {item.label}
+                      <PiCaretDown
+                        className={`transition-transform ${
+                          expanded === item.label ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
+                    {expanded === item.label && (
+                      <div className="flex flex-col pb-3 pl-4">
+                        <Link to={item.to} className="py-2 text-gold">
+                          All {item.label}
+                        </Link>
+                        {item.children.map((c) => (
+                          <Link key={c.to} to={c.to} className="py-2 text-cream/80">
+                            {c.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <NavLink to={item.to} className={(s) => `block py-4 text-lg ${linkCls(s)}`}>
+                    {item.label}
+                  </NavLink>
+                )}
+              </div>
             ))}
-            <div className="border-t pt-4 mt-2">
-              <div className="flex items-center gap-2 px-4 py-2 text-gray-700 mb-2">
-                <HiGlobe className="w-5 h-5" />
-                <span className="font-medium">{t("nav.language")}</span>
-              </div>
-              <div className="space-y-1">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-colors ${
-                      i18n.language === lang.code
-                        ? "bg-blue-50 text-blue-600 font-semibold"
-                        : "text-gray-700 hover:bg-gray-50"
-                    }`}>
-                    <ReactCountryFlag
-                      countryCode={lang.country}
-                      svg
-                      style={{
-                        width: "20px",
-                        height: "15px",
-                      }}
-                      title={lang.name}
-                    />
-                    <span className="text-sm">{lang.name}</span>
-                  </button>
-                ))}
-              </div>
-            </div>
-            <button
-              onClick={() => {
-                setIsOpen(true);
-                setIsMenuOpen(false);
-              }}
-              className="bg-[#18a4c7] text-white font-bold py-3 px-4 rounded-full text-center mt-4 hover:bg-[#1599b9] transition-colors">
-              {t("nav.contact")}
-            </button>
-          </nav>
-        </motion.div>
+            <Link
+              to="/contact"
+              className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-gold px-5 py-3 font-semibold text-ink">
+              Contact Us <PiArrowRight />
+            </Link>
+          </Container>
+        </div>
       )}
-    </motion.header>
+    </header>
   );
 };
 
