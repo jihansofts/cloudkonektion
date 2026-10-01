@@ -52,11 +52,11 @@ const Home = () => (
         alt="Construction workers on an active building site"
         className="hero-zoom absolute inset-0 -z-10 h-full w-full object-cover"
       />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/70 to-ink/30" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/80 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/30 to-ink/20" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/20 to-transparent" />
       <Container className="pb-20 pt-40 sm:pb-28">
         <div className="max-w-3xl text-center md:text-left">
-          <p className="load-up mb-5 text-xs font-bold uppercase tracking-[0.25em] text-gold">
+          <p className="load-up mb-5 text-xs font-extrabold uppercase tracking-[0.25em] text-gold">
             International Workforce Recruitment
           </p>
           <SplitText
@@ -65,10 +65,10 @@ const Home = () => (
             start={200}
             step={80}
             text="International Workforce, Placed Across Europe."
-            className="text-5xl leading-[1.05] text-cream sm:text-6xl lg:text-7xl"
+            className="font-semibold text-5xl leading-[1.05] text-cream sm:text-6xl lg:text-7xl"
           />
           <p
-            className="load-up mt-6 max-w-2xl text-lg leading-relaxed text-cream/85 sm:text-xl"
+            className="load-up mt-6 max-w-2xl text-lg leading-relaxed text-cream sm:text-xl"
             style={{ "--d": "700ms" }}>
             Karyera Plus connects skilled and reliable workers from{" "}
             {COMPANY.sourceRegions} with employers across Europe — handling
@@ -77,8 +77,15 @@ const Home = () => (
           <div
             className="load-up mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start"
             style={{ "--d": "900ms" }}>
-            <Button to="/employers#submit-vacancy">Submit a Vacancy</Button>
-            <Button to="/candidates#register" variant="outline">
+            <Button
+              className="bg-white hover:text-white"
+              to="/employers#submit-vacancy">
+              Submit a Vacancy
+            </Button>
+            <Button
+              className="border border-white text-white hover:bg-white hover:text-ink"
+              to="/candidates#register"
+              variant="outline">
               Register as a Candidate
             </Button>
           </div>
@@ -105,7 +112,9 @@ const Home = () => (
                 <Icon name={s.icon} />
               </span>
               <h3 className="mt-6 text-2xl text-night">{s.name}</h3>
-              <p className="mt-3 flex-1 leading-relaxed text-night/70">{s.card}</p>
+              <p className="mt-3 flex-1 leading-relaxed text-night/70">
+                {s.card}
+              </p>
               <span className="mt-6 inline-flex items-center gap-2 font-semibold text-gold-deep">
                 Learn About {s.name.split(" /")[0]}
                 <PiArrowRight className="transition-transform group-hover:translate-x-1" />
@@ -125,9 +134,15 @@ const Home = () => (
     <section className="bg-taupe py-20 sm:py-24">
       <Container>
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-          <SectionHeading dark eyebrow="Why Employers Work With Us" title="Built to take the guesswork out of hiring internationally." />
+          <SectionHeading
+            dark
+            eyebrow="Why Employers Work With Us"
+            title="Built to take the guesswork out of hiring internationally."
+          />
           <Reveal variant="fade" delay={300}>
-            <Link to="/why-choose-us" className="group inline-flex shrink-0 items-center gap-2 font-semibold text-gold hover:text-cream">
+            <Link
+              to="/why-choose-us"
+              className="group inline-flex shrink-0 items-center gap-2 font-semibold text-gold hover:text-cream">
               <span className="link-grow">Why Choose Us</span>
               <PiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </Link>
@@ -136,7 +151,10 @@ const Home = () => (
         <Stagger className="mt-12 grid gap-px overflow-hidden rounded-2xl bg-cream/10 sm:grid-cols-2 lg:grid-cols-4">
           {WHY.map(({ icon: Ic, text }) => (
             <div key={text} className="group bg-taupe p-8 hover:bg-ink">
-              <Ic aria-hidden="true" className="text-4xl text-sage transition-transform duration-500 group-hover:-translate-y-1 group-hover:scale-110" />
+              <Ic
+                aria-hidden="true"
+                className="text-4xl text-sage transition-transform duration-500 group-hover:-translate-y-1 group-hover:scale-110"
+              />
               <p className="mt-5 text-lg leading-snug text-cream">{text}</p>
             </div>
           ))}
@@ -147,8 +165,14 @@ const Home = () => (
     {/* Sectors */}
     <section className="py-20 sm:py-28">
       <Container>
-        <SectionHeading eyebrow="Sectors We Recruit For" title="Blue-collar roles that are hard to resource locally." />
-        <Stagger variant="clip" step={130} className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <SectionHeading
+          eyebrow="Sectors We Recruit For"
+          title="Blue-collar roles that are hard to resource locally."
+        />
+        <Stagger
+          variant="clip"
+          step={130}
+          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {SECTORS.map((s) => (
             <Link
               key={s.slug}
@@ -175,11 +199,22 @@ const Home = () => (
     {/* How it works */}
     <section className="border-t border-line bg-white py-20 sm:py-24">
       <Container>
-        <SectionHeading eyebrow="How It Works" title="From requirement to first day, in four steps." />
-        <Stagger as="ol" step={150} className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <SectionHeading
+          eyebrow="How It Works"
+          title="From requirement to first day, in four steps."
+        />
+        <Stagger
+          as="ol"
+          step={150}
+          className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {PROCESS_TEASER.map((step, i) => (
-            <li key={step} className="group relative border-t-2 border-line pt-6">
-              <span className="absolute -top-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-[1400ms] ease-out [.is-visible>*>&]:scale-x-100" style={{ transitionDelay: `${300 + i * 150}ms` }} />
+            <li
+              key={step}
+              className="group relative border-t-2 border-line pt-6">
+              <span
+                className="absolute -top-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-[1400ms] ease-out [.is-visible>*>&]:scale-x-100"
+                style={{ transitionDelay: `${300 + i * 150}ms` }}
+              />
               <span className="font-display text-5xl text-gold-deep">
                 {String(i + 1).padStart(2, "0")}
               </span>

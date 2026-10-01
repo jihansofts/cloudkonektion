@@ -5,7 +5,11 @@ import { SECTORS, SERVICES } from "../data/site";
 import { Container } from "./ui";
 
 export const Logo = ({ className = "h-12 w-20" }) => (
-  <span role="img" aria-label="Karyera Plus" className={`logo-mask block ${className}`} />
+  <span
+    role="img"
+    aria-label="Karyera Plus"
+    className={`logo-mask block ${className}`}
+  />
 );
 
 const NAV = [
@@ -13,7 +17,10 @@ const NAV = [
   {
     label: "Services",
     to: "/services",
-    children: SERVICES.map((s) => ({ label: s.name, to: `/services/${s.slug}` })),
+    children: SERVICES.map((s) => ({
+      label: s.name,
+      to: `/services/${s.slug}`,
+    })),
   },
   {
     label: "Occupations",
@@ -31,7 +38,8 @@ const linkCls = ({ isActive }) =>
   `transition-colors ${isActive ? "text-gold" : "text-cream/85 hover:text-gold"}`;
 
 const AudienceToggle = ({ className = "" }) => (
-  <div className={`flex rounded-full border border-cream/15 p-1 text-sm ${className}`}>
+  <div
+    className={`flex rounded-full border border-cream/15 p-1 text-sm ${className}`}>
     {[
       { label: "For Employers", to: "/employers" },
       { label: "For Candidates", to: "/candidates" },
@@ -83,24 +91,31 @@ const Header = () => {
 
   // Lets sticky elements (e.g. the Occupations jump-nav) follow the header.
   useEffect(() => {
-    document.documentElement.dataset.header = hidden && !open ? "hidden" : "shown";
+    document.documentElement.dataset.header =
+      hidden && !open ? "hidden" : "shown";
   }, [hidden, open]);
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out ${
-        scrolled || open ? "bg-ink shadow-lg shadow-black/20" : "bg-ink/80 backdrop-blur"
+      className={` fixed inset-x-0 top-0 z-50 transition-all duration-500 ease-out ${
+        scrolled || open ? "bg-ink shadow-lg shadow-black/20" : "bg-ink"
       } ${hidden && !open ? "-translate-y-full" : ""}`}>
       <Container className="flex h-20 items-center justify-between gap-6">
         <Link to="/" aria-label="Karyera Plus home" className="shrink-0">
           <Logo />
         </Link>
 
-        <nav aria-label="Main" className="mr-auto hidden items-center gap-7 text-[15px] font-medium xl:flex">
+        <nav
+          aria-label="Main"
+          className="mr-auto hidden items-center gap-7 text-[15px] font-medium xl:flex">
           {NAV.map((item) =>
             item.children ? (
               <div key={item.label} className="group relative">
-                <NavLink to={item.to} className={(s) => `flex items-center gap-1 py-7 ${linkCls(s)}`}>
+                <NavLink
+                  to={item.to}
+                  className={(s) =>
+                    `flex items-center gap-1 py-7 ${linkCls(s)}`
+                  }>
                   {item.label}
                   <PiCaretDown className="text-xs transition-transform group-hover:rotate-180 group-focus-within:rotate-180" />
                 </NavLink>
@@ -121,7 +136,7 @@ const Header = () => {
               <NavLink key={item.label} to={item.to} className={linkCls}>
                 {item.label}
               </NavLink>
-            )
+            ),
           )}
         </nav>
 
@@ -170,7 +185,10 @@ const Header = () => {
                           All {item.label}
                         </Link>
                         {item.children.map((c) => (
-                          <Link key={c.to} to={c.to} className="py-2 text-cream/80">
+                          <Link
+                            key={c.to}
+                            to={c.to}
+                            className="py-2 text-cream/80">
                             {c.label}
                           </Link>
                         ))}
@@ -178,7 +196,9 @@ const Header = () => {
                     )}
                   </>
                 ) : (
-                  <NavLink to={item.to} className={(s) => `block py-4 text-lg ${linkCls(s)}`}>
+                  <NavLink
+                    to={item.to}
+                    className={(s) => `block py-4 text-lg ${linkCls(s)}`}>
                     {item.label}
                   </NavLink>
                 )}

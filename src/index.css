@@ -2,7 +2,7 @@
 
 /* Karyera Plus palette — single sitewide palette (spec 1.2) */
 @theme {
-  --color-ink: #4a4442; /* primary dark background / header / footer */
+  --color-ink: #454140; /* primary dark background / header / footer */
   --color-taupe: #3e362c; /* lighter dark variant for alt sections */
   --color-gold: #c9a667; /* primary accent + CTA */
   --color-gold-deep: #a9854f; /* accent hover */
@@ -12,8 +12,8 @@
   --color-ivory: #faf7f1; /* light section background */
   --color-line: #d8d0c3; /* borders / dividers */
 
-  --font-sans: "Manrope", system-ui, sans-serif;
-  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Source Sans 3", system-ui, sans-serif;
+  /* --font-display: "Fraunces", Georgia; */
 }
 
 html {
