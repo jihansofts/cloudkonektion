@@ -2,7 +2,7 @@
 
 /* Karyera Plus palette — single sitewide palette (spec 1.2) */
 @theme {
-  --color-ink: #2b241e; /* primary dark background / header / footer */
+  --color-ink: #4a4442; /* primary dark background / header / footer */
   --color-taupe: #3e362c; /* lighter dark variant for alt sections */
   --color-gold: #c9a667; /* primary accent + CTA */
   --color-gold-deep: #a9854f; /* accent hover */
