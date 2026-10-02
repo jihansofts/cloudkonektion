@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   PiArrowRight,
@@ -43,20 +44,74 @@ const WHY = [
   },
 ];
 
+const HERO_SLIDES = [
+  {
+    src: "/images/site/hero-slide-1.jpg",
+    alt: "Candidate shaking hands with a recruiter after an interview",
+  },
+  {
+    src: "/images/site/hero-slide-2.jpg",
+    alt: "Recruiter welcoming a new hire in the office",
+  },
+  {
+    src: "/images/site/hero-slide-3.jpg",
+    alt: "Candidate in a job interview across the desk from a recruiter",
+  },
+  {
+    src: "/images/site/hero-slide-4.jpg",
+    alt: "Employer and candidate shaking hands over a desk",
+  },
+];
+
+const HeroSlider = () => {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(
+      () => setActive((i) => (i + 1) % HERO_SLIDES.length),
+      5000,
+    );
+    return () => clearInterval(id);
+  }, [active]);
+
+  return (
+    <div className="relative h-80 overflow-hidden sm:h-112 lg:h-auto">
+      {HERO_SLIDES.map((s, i) => (
+        <img
+          key={s.src}
+          src={s.src}
+          alt={s.alt}
+          loading={i === 0 ? "eager" : "lazy"}
+          className={`absolute inset-0 h-full w-full object-cover transition-all duration-1400 ease-out ${
+            i === active ? "scale-100 opacity-100" : "scale-110 opacity-0"
+          }`}
+        />
+      ))}
+      <div className="absolute inset-0 bg-linear-to-r from-ink/30 via-transparent to-transparent" />
+      <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-2">
+        {HERO_SLIDES.map((s, i) => (
+          <button
+            key={s.src}
+            type="button"
+            aria-label={`Show slide ${i + 1}`}
+            onClick={() => setActive(i)}
+            className={`h-2.5 rounded-full transition-all duration-500 ${
+              i === active ? "w-8 bg-gold" : "w-2.5 bg-white/70 hover:bg-white"
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const Home = () => (
   <>
     {/* Hero */}
-    <section className="relative isolate flex min-h-[92vh] items-end overflow-hidden bg-ink">
-      <img
-        src="/images/site/hero-construction.jpg"
-        alt="Construction workers on an active building site"
-        className="hero-zoom absolute inset-0 -z-10 h-full w-full object-cover"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/30 to-ink/20" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/20 to-transparent" />
-      <Container className="pb-20 pt-40 sm:pb-28">
-        <div className="max-w-3xl text-center md:text-left">
-          <p className="load-up mb-5 text-xs font-extrabold uppercase tracking-[0.25em] text-gold">
+    <section className="grid bg-ink pt-20 lg:min-h-[92vh] lg:grid-cols-2">
+      <div className="relative flex items-center px-6 py-16 sm:px-10 lg:py-24 lg:pl-[max(2.5rem,calc((100vw-80rem)/2+2rem))] lg:pr-14">
+        <div className="max-w-2xl">
+          <p className="load-up mb-5 text-xs font-extrabold uppercase tracking-[0.25em] text-cream/70">
             International Workforce Recruitment
           </p>
           <SplitText
@@ -65,32 +120,35 @@ const Home = () => (
             start={200}
             step={80}
             text="International Workforce, Placed Across Europe."
-            className="font-semibold text-5xl leading-[1.05] text-cream sm:text-6xl lg:text-7xl"
+            className="text-5xl font-bold leading-[1.08] text-gold sm:text-6xl"
           />
           <p
-            className="load-up mt-6 max-w-2xl text-lg leading-relaxed text-cream sm:text-xl"
+            className="load-up mt-6 text-lg leading-relaxed text-gold/90 sm:text-xl"
             style={{ "--d": "700ms" }}>
             Karyera Plus connects skilled and reliable workers from{" "}
             {COMPANY.sourceRegions} with employers across Europe — handling
             sourcing, screening, and the administration in between.
           </p>
           <div
-            className="load-up mt-10 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start"
+            className="load-up mt-10 flex flex-col gap-4 sm:flex-row"
             style={{ "--d": "900ms" }}>
             <Button
-              className="bg-white hover:text-white"
+              arrow={false}
+              className="rounded-md! rounded-br-3xl! px-10! py-5! text-lg! text-white!"
               to="/employers#submit-vacancy">
               Submit a Vacancy
             </Button>
             <Button
-              className="border border-white text-white hover:bg-white hover:text-ink"
+              arrow={false}
+              className="rounded-md! rounded-br-3xl! px-10! py-5! text-lg!"
               to="/candidates#register"
-              variant="outline">
+              variant="light">
               Register as a Candidate
             </Button>
           </div>
         </div>
-      </Container>
+      </div>
+      <HeroSlider />
     </section>
 
     <CountryMarquee />
@@ -163,33 +221,43 @@ const Home = () => (
     </section>
 
     {/* Sectors */}
-    <section className="py-20 sm:py-28">
+    <section className="bg-gold py-20 sm:py-28">
       <Container>
-        <SectionHeading
-          eyebrow="Sectors We Recruit For"
-          title="Blue-collar roles that are hard to resource locally."
-        />
+        <div className="mx-auto max-w-3xl text-center">
+          <Reveal variant="fade">
+            <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-ink/80">
+              Sectors We Recruit For
+            </p>
+          </Reveal>
+          <SplitText
+            text="Blue-collar roles that are hard to resource locally."
+            className="text-3xl font-bold leading-tight text-white sm:text-4xl"
+          />
+        </div>
         <Stagger
           variant="clip"
           step={130}
-          className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {SECTORS.map((s) => (
             <Link
               key={s.slug}
               to={`/occupations#${s.slug}`}
-              className="group relative isolate block aspect-[4/3] overflow-hidden rounded-2xl bg-ink">
+              className="group relative isolate block aspect-[11/12] overflow-hidden rounded-md rounded-br-[4.5rem] bg-ink">
               <img
                 src={s.image}
                 alt=""
                 loading="lazy"
                 className="absolute inset-0 -z-10 h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
               />
-              <div className="absolute inset-0 -z-10 bg-gradient-to-t from-ink via-ink/40 to-transparent transition-opacity duration-500 group-hover:opacity-90" />
-              <div className="flex h-full flex-col justify-end p-6 transition-transform duration-500 group-hover:-translate-y-2">
-                <h3 className="text-2xl text-cream">{s.name}</h3>
-                <p className="mt-1 text-cream/80">{s.line}</p>
+              <div className="absolute inset-0 -z-10 bg-ink/45 transition-colors duration-500 group-hover:bg-ink/65" />
+              <div className="flex h-full flex-col items-center justify-center px-8 text-center">
+                <h3 className="text-3xl font-bold leading-tight text-white drop-shadow-md">
+                  {s.name}
+                </h3>
+                <p className="mt-2 max-h-0 overflow-hidden text-cream/90 opacity-0 transition-all duration-500 group-hover:max-h-20 group-hover:opacity-100">
+                  {s.line}
+                </p>
               </div>
-              <PiArrowUpRight className="absolute right-5 top-5 rounded-full bg-gold p-2 text-4xl text-ink opacity-0 transition-all duration-500 -translate-x-2 translate-y-2 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100" />
             </Link>
           ))}
         </Stagger>
@@ -212,7 +280,7 @@ const Home = () => (
               key={step}
               className="group relative border-t-2 border-line pt-6">
               <span
-                className="absolute -top-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-[1400ms] ease-out [.is-visible>*>&]:scale-x-100"
+                className="absolute -top-0.5 left-0 h-0.5 w-full origin-left scale-x-0 bg-gold transition-transform duration-1400 ease-out [.is-visible>*>&]:scale-x-100"
                 style={{ transitionDelay: `${300 + i * 150}ms` }}
               />
               <span className="font-display text-5xl text-gold-deep">

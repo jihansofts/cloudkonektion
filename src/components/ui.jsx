@@ -41,6 +41,7 @@ const BUTTON_VARIANTS = {
   sage: "bg-sage text-night hover:bg-[#6b7a5f]",
   outline: "border border-gold text-gold hover:bg-gold hover:text-ink",
   "outline-dark": "border border-night/70 text-night hover:bg-night hover:text-ivory",
+  light: "bg-[#d9d9d9] text-ink hover:bg-white",
 };
 
 export const Button = ({
