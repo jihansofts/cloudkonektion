@@ -31,7 +31,7 @@ export const Icon = ({ name, ...props }) => {
 };
 
 export const Container = ({ className = "", children }) => (
-  <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>
+  <div className={`mx-auto w-full container px-4 sm:px-6 lg:px-8 ${className}`}>
     {children}
   </div>
 );
@@ -40,7 +40,8 @@ const BUTTON_VARIANTS = {
   gold: "bg-gold text-ink hover:bg-gold-deep",
   sage: "bg-sage text-night hover:bg-[#6b7a5f]",
   outline: "border border-gold text-gold hover:bg-gold hover:text-ink",
-  "outline-dark": "border border-night/70 text-night hover:bg-night hover:text-ivory",
+  "outline-dark":
+    "border border-night/70 text-night hover:bg-night hover:text-ivory",
   light: "bg-[#d9d9d9] text-ink hover:bg-white",
 };
 
@@ -82,7 +83,8 @@ export const Eyebrow = ({ children, dark = false }) => (
   <p
     className={`mb-3 text-xs font-bold uppercase tracking-[0.2em] ${
       dark ? "text-gold" : "text-gold-deep"
-    }`}>
+    }`}
+  >
     {children}
   </p>
 );
@@ -112,7 +114,8 @@ export const SectionHeading = ({
         delay={250}
         className={`mt-4 text-lg leading-relaxed ${
           dark ? "text-cream/80" : "text-night/75"
-        }`}>
+        }`}
+      >
         {text}
       </Reveal>
     )}
@@ -147,14 +150,16 @@ export const PageHero = ({ eyebrow, title, text, image, children }) => (
         {text && (
           <p
             className="load-up mt-6 text-lg leading-relaxed text-cream/85"
-            style={{ "--d": "550ms" }}>
+            style={{ "--d": "550ms" }}
+          >
             {text}
           </p>
         )}
         {children && (
           <div
             className="load-up mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center md:justify-start"
-            style={{ "--d": "750ms" }}>
+            style={{ "--d": "750ms" }}
+          >
             {children}
           </div>
         )}
@@ -177,7 +182,11 @@ export const CtaSplit = () => (
         Submit a Vacancy
       </Button>
     </Reveal>
-    <Reveal variant="right" delay={120} className="bg-ink px-6 py-16 sm:px-12 lg:px-20">
+    <Reveal
+      variant="right"
+      delay={120}
+      className="bg-ink px-6 py-16 sm:px-12 lg:px-20"
+    >
       <p className="mb-3 text-xs font-bold uppercase tracking-[0.2em] text-sage">
         For Candidates
       </p>
