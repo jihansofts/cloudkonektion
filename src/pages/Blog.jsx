@@ -20,7 +20,7 @@ const Blog = () => {
       <PageHero
         eyebrow="Blog"
         title="Guidance, Regulation Updates, and Recruitment Insight."
-        text="A running library of practical articles for employers and candidates navigating international recruitment — from right-to-work basics to sector-specific hiring guidance."
+        text="A running library of practical articles for employers and candidates  navigating international recruitment — from right-to-work basics to sector-specific hiring guidance."
         image="/images/site/blog-hero.jpg"
       />
       <section className="py-16 sm:py-20">
