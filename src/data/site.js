@@ -15,7 +15,7 @@ export const COMPANY = {
     embedUrl:
       "https://maps.google.com/maps?q=220%20The%20Vale%2C%20London%20NW11%208SR&z=15&output=embed",
   },
-  email: "help@karyeraplus.com",
+  email: "help@karyeraplus.top",
   sourceRegions: "Asia, the Middle East, and Africa",
   socials: {
     facebook: "https://www.facebook.com/KayeraPlus",
@@ -30,7 +30,7 @@ export const COMPANY = {
 // FormSubmit endpoint. Once activated, swap the email for the random
 // string FormSubmit emails you, so the address isn't exposed in the HTML.
 export const FORM_ENDPOINT =
-  "https://formsubmit.co/help@karyeraplus.com";
+  "https://formsubmit.co/help@karyeraplus.top";
 
 // Set when the legal pages are published, e.g. "1 October 2026".
 export const LEGAL_LAST_UPDATED = null;
