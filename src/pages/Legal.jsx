@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Container, PageHero } from "../components/ui";
+import { Button, Container, PageHero } from "../components/ui";
 import { COMPANY, COUNTRY_COUNT, LEGAL_LAST_UPDATED } from "../data/site";
 
 const LegalLayout = ({ eyebrow, title, children }) => (
@@ -329,9 +329,16 @@ export const ThankYou = () => (
 );
 
 export const NotFound = () => (
-  <PageHero eyebrow="404" title="We couldn't find that page." text="It may have moved, or the link may be incorrect.">
-    <Link to="/" className="inline-flex items-center justify-center rounded-full bg-gold px-6 py-3 font-semibold text-ink hover:bg-gold-deep">
-      Back to Homepage
-    </Link>
-  </PageHero>
+  <section className="flex min-h-screen items-center justify-center bg-ink px-4 pb-16 pt-32 text-center">
+    <div className="load-up max-w-xl">
+      <p className="text-8xl font-bold leading-none text-gold sm:text-9xl">404</p>
+      <h1 className="mt-6 text-3xl text-cream sm:text-4xl">Page not found</h1>
+      <p className="mt-4 text-lg leading-relaxed text-cream/75">
+        The page you're looking for may have moved, or the link may be incorrect.
+      </p>
+      <Button to="/" className="mt-10">
+        Back to Homepage
+      </Button>
+    </div>
+  </section>
 );
