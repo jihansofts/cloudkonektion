@@ -27,10 +27,10 @@ export const COMPANY = {
   },
 };
 
-// FormSubmit endpoint. Once activated, swap the email for the random
-// string FormSubmit emails you, so the address isn't exposed in the HTML.
+// FormSubmit endpoint, using the random alias FormSubmit issued for
+// help@karyeraplus.top so the address isn't exposed in the HTML.
 export const FORM_ENDPOINT =
-  "https://formsubmit.co/help@karyeraplus.top";
+  "https://formsubmit.co/28337a231d88954724597d15c65585cc";
 
 // Set when the legal pages are published, e.g. "1 October 2026".
 export const LEGAL_LAST_UPDATED = null;
