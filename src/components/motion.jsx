@@ -50,6 +50,21 @@ export const Reveal = ({
   ...props
 }) => {
   const [ref, visible] = useInView();
+  // A fully clipped element never reports as intersecting in Chrome, so the
+  // observer sits on the outer element and the clip goes on an inner one.
+  if (variant === "clip") {
+    return (
+      <Tag
+        ref={ref}
+        className={`${visible ? "is-visible" : ""} ${className}`}
+        style={style}
+        {...props}>
+        <div data-reveal-child="clip" style={{ "--d": `${delay}ms` }}>
+          {children}
+        </div>
+      </Tag>
+    );
+  }
   return (
     <Tag
       ref={ref}
