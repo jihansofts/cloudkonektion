@@ -23,14 +23,13 @@ const NAV = [
     })),
   },
   {
-    label: "Occupations",
-    to: "/occupations",
+    label: "Industries We Serve",
+    to: "/industries",
     children: SECTORS.slice(0, 5).map((s) => ({
       label: s.name,
-      to: `/occupations#${s.slug}`,
+      to: `/industries#${s.slug}`,
     })),
   },
-  { label: "Industries We Serve", to: "/industries" },
   { label: "Blog", to: "/blog" },
 ];
 

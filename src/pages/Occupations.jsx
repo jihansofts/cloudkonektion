@@ -7,7 +7,7 @@ import { Reveal } from "../components/motion";
 const Occupations = () => (
   <>
     <PageHero
-      eyebrow="Occupations & Industries We Serve"
+      eyebrow="Industries We Serve"
       title="Roles We Recruit For, Across Europe."
       text="Six sectors, one consistent process: understand the role, source properly, verify thoroughly, and stay involved through onboarding."
       image="/images/site/sector-construction.jpg"

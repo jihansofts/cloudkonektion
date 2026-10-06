@@ -21,10 +21,10 @@ const HUB = [
   },
   {
     icon: PiUsersThree,
-    title: "Occupations",
+    title: "Industries We Serve",
     text: "Construction, manufacturing, hospitality, logistics & transport, agriculture, and cleaning & facilities.",
-    to: "/occupations",
-    cta: "View Occupations",
+    to: "/industries",
+    cta: "View Industries",
   },
 ];
 

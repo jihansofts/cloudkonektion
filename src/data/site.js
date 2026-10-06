@@ -222,7 +222,7 @@ export const FAQS = [
   },
   {
     q: "Which sectors do you recruit for?",
-    a: "Construction, manufacturing, hospitality, logistics & transport, agriculture, and cleaning & facilities. See our Occupations page for the roles within each.",
+    a: "Construction, manufacturing, hospitality, logistics & transport, agriculture, and cleaning & facilities. See our Industries We Serve page for the roles within each.",
   },
   {
     q: "Can I use your screening service for candidates I've found myself?",

@@ -241,7 +241,7 @@ const Home = () => (
           {SECTORS.map((s) => (
             <Link
               key={s.slug}
-              to={`/occupations#${s.slug}`}
+              to={`/industries#${s.slug}`}
               className="group relative isolate block aspect-[11/12] overflow-hidden rounded-md rounded-br-[4.5rem] bg-ink">
               <img
                 src={s.image}

@@ -29,7 +29,6 @@ function App() {
         <Route path="recruitment-process" element={<Process />} />
         <Route path="services" element={<ServicesHub />} />
         <Route path="services/:slug" element={<ServiceDetail />} />
-        <Route path="occupations" element={<Occupations />} />
         <Route path="industries" element={<Occupations />} />
         <Route path="employers" element={<Employers />} />
         <Route path="candidates" element={<Candidates />} />
@@ -42,6 +41,7 @@ function App() {
         <Route path="thank-you" element={<ThankYou />} />
         {/* Old URL from the previous site */}
         <Route path="applicants" element={<Navigate to="/candidates" replace />} />
+        <Route path="occupations" element={<Navigate to="/industries" replace />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
