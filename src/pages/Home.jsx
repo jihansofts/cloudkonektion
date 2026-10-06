@@ -61,6 +61,10 @@ const HERO_SLIDES = [
     src: "/images/site/hero-slide-4.jpg",
     alt: "Employer and candidate shaking hands over a desk",
   },
+  {
+    src: "/images/site/hero-slide-5.jpg",
+    alt: "Recruiter and candidate shaking hands over a desk",
+  },
 ];
 
 const HeroSlider = () => {
