@@ -111,7 +111,7 @@ const FormShell = ({
     <input
       type="hidden"
       name="_next"
-      value={`${window.location.origin}/thank-you`}
+      value={`${window.location.origin}/?submitted=1`}
     />
     {autoresponse && (
       <input type="hidden" name="_autoresponse" value={autoresponse} />

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useSearchParams } from "react-router-dom";
+import { PiCheckCircleFill, PiX } from "react-icons/pi";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -53,6 +54,42 @@ const CookieBanner = () => {
   );
 };
 
+// FormSubmit redirects back to /?submitted=1 after a successful submission.
+const SubmitToast = () => {
+  const [params, setParams] = useSearchParams();
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (params.get("submitted") !== "1") return;
+    setOpen(true);
+    setParams({}, { replace: true });
+  }, [params, setParams]);
+  useEffect(() => {
+    if (!open) return;
+    const id = setTimeout(() => setOpen(false), 7000);
+    return () => clearTimeout(id);
+  }, [open]);
+  if (!open) return null;
+  return (
+    <div
+      role="status"
+      className="load-up fixed inset-x-4 top-24 z-[60] mx-auto flex max-w-md items-start gap-3 rounded-2xl border border-sage/30 bg-white p-5 text-night shadow-2xl">
+      <PiCheckCircleFill className="mt-0.5 shrink-0 text-2xl text-sage" />
+      <div className="flex-1">
+        <p className="font-semibold">Submitted successfully</p>
+        <p className="mt-1 text-sm text-night/70">
+          Thank you — we've received your details and will be in touch soon.
+        </p>
+      </div>
+      <button
+        onClick={() => setOpen(false)}
+        aria-label="Close"
+        className="text-xl text-night/50 hover:text-night">
+        <PiX />
+      </button>
+    </div>
+  );
+};
+
 // Scroll to top on page change, or to the #anchor when one is present.
 const ScrollManager = () => {
   const { pathname, hash } = useLocation();
@@ -83,6 +120,7 @@ const Layout = () => (
     </main>
     <Footer />
     <CookieBanner />
+    <SubmitToast />
   </div>
 );
 
